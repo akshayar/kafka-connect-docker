@@ -2,6 +2,8 @@
 
 set -e
 
-envsubst < /opt/mirrormaker/mm2.template > /var/run/mirrormaker/mm2.config
 
-/opt/bitnami/kafka/bin/connect-mirror-maker.sh /var/run/mirrormaker/mm2.config
+envsubst < /opt/kafka-connect/connect-distributed.template > /var/run/kafka-connect/connect-distributed.properties
+
+/opt/bitnami/kafka/bin/connect-distributed.sh /var/run/kafka-connect/connect-distributed.properties
+
