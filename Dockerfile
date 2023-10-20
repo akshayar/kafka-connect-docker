@@ -14,7 +14,6 @@ ENV REPLICATION_FACTOR 3
 ENV OFFSET_STORAGE_TOPIC "connect-offsets"
 ENV CONFIG_STORAGE_TOPIC "connect-config"
 ENV STATUS_STORAGE_TOPIC "connect-status"
-ENV TASKS_MAX 10
 
 USER 1234
 CMD /opt/mirrormaker/run.sh
